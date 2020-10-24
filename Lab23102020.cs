@@ -13,7 +13,7 @@ namespace Lab23102020
 
         static void Main(string[] args)
         {
-            string[][] shedule = AddStudentsQuantity();
+            string[][] sсhedule = AddStudentsQuantity();
             InitializTheList(shedule);
 
         }
@@ -21,30 +21,30 @@ namespace Lab23102020
         {
             Console.WriteLine("Сколько студентов?");
             quantity = int.Parse(Console.ReadLine());
-            string[][] shedule = new string[quantity][];
-            return shedule;
+            string[][] sсhedule = new string[quantity][];
+            return sсhedule;
         }
 
-        static void AddDisciplinesQuantity(string[][] shedule, int i)
+        static void AddDisciplinesQuantity(string[][] sсhedule, int i)
         {
             Console.WriteLine("Скажите количество дисциплин");
             discipline = int.Parse(Console.ReadLine());
-            shedule[i] = new string[discipline];
+            sсhedule[i] = new string[discipline];
         }
 
-        static void AddMarks(string[][] shedule, int i, int j)
+        static void AddMarks(string[][] sсhedule, int i, int j)
         {
             Console.WriteLine("Скажите оценки");
             marks = Console.ReadLine();
-            shedule[i][j] = marks;
+            sсhedule[i][j] = marks;
         }
 
-        static double GetAverageMark(string[][] shedule, int i,int j)
+        static double GetAverageMark(string[][] sсhedule, int i,int j)
         {
             int summ = 0, count = 0, number = 0;
             double result = 0;
-            foreach (char value in shedule[i][j])
-                shedule[i][j] = shedule[i][j].Replace(" ", null);
+            foreach (char value in sсhedule[i][j])
+                sсhedule[i][j] = shedule[i][j].Replace(" ", null);
             
 
             for (int s = 0; s < shedule[i][j].Length; s++)
@@ -58,7 +58,7 @@ namespace Lab23102020
              result = Math.Abs(Math.Round((double)summ / count));
         }
 
-        static void InitializTheList(string[][] shedule)
+        static void InitializTheList(string[][] sсhedule)
         {
             for (int i = 0; i < quantity; i++)
             {
@@ -66,7 +66,7 @@ namespace Lab23102020
                name = Console.ReadLine();
                
 
-                AddDisciplinesQuantity(shedule, i);
+                AddDisciplinesQuantity(sсhedule, i);
                  for (int j = 0; j < discipline; j++)
                  {
                     Console.WriteLine("Введите дисциплину");
